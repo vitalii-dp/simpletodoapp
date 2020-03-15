@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
+    integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <title>Simple Todo List</title>
+</head>
+
+<body>
+  <div class="container">
+    <img src="doge.jpg" alt="Doge" width="300" height="300">
+
+    <h1>Simple Todo List</h1>
+
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="What needs to be done?" id="task-input" autofocus>
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="submit" id="add-task">Add new task</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button class="btn btn-sm btn-success" type="submit" id="check-all"><i class="far fa-check-square"></i></button>
+          <button type="button" class="btn btn-sm btn-secondary" id="show-all">All</button>
+          <button type="button" class="btn btn-sm btn-secondary" id="show-active">Active</button>
+          <button type="button" class="btn btn-sm btn-secondary" id="show-completed">Completed</button>
+          <button type="button" class="btn btn-sm btn-secondary" id="delete-completed">Delete completed</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="items">
+      <!-- Todo items will spawn here -->
+    </div>
+    <span id="todos-counter"></span>
+
+  </div>
+
+  <footer>Simple Todo List using Web Components & Local Storage v0.6.1</footer>
+  <script type="module" src="todoItem.js"></script>
+  <script type="module" src="taskHandlers.js"></script>
+</body>
+
+</html>
